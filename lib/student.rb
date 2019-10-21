@@ -102,9 +102,7 @@ class Student
       SELECT * FROM students WHERE grade = ?
     SQL
 
-    DB[:conn].execute(sql).map do |grade|
-      self.new_from_db(grade)
-    end
+    DB[:conn].execute(sql)
   end
 
 end
